@@ -34,7 +34,7 @@ def cnnCharRecognition(img):
 
 
 def first_crop(img):
-  # try:
+  try:
     os.chdir('/home/ubuntu/anpr_sj')
     # detect location of plate
     img1 = 'images/'+img
@@ -88,10 +88,10 @@ def first_crop(img):
     shutil.rmtree(dir_path, ignore_errors=True)
     return(str(lst_rs))
 
-  # except:
-  #   dir_path = r"/home/ubuntu/anpr_sj/runs"
-  #   shutil.rmtree(dir_path, ignore_errors=True)
-  #   return img
+  except:
+    dir_path = r"/home/ubuntu/anpr_sj/runs"
+    shutil.rmtree(dir_path, ignore_errors=True)
+    return img
 
 
 # def first_crop(img):
